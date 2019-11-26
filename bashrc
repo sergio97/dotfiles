@@ -37,10 +37,13 @@ export EDITOR=vim
 alias pe='pipenv'
 alias eform='black -l 120 *.py'
 alias uj='echo -n $1 > /home/sergio.martins/.config/autokey/data/Day-to-day/jcode.txt'
+alias b="find ./ -name '*.py' | xargs black -l 120"
 
 # Misc stuff
 alias vash='vim ~/.bashrc'
+alias b64='base64 -w 0'
 alias ethip='ip a | grep -e enp -e enx | awk "/inet /{print $2}" | cut -d/ -f1'
+alias ips='ip a | grep "inet " | grep -Pe "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias count_files_in_dirs='for x in $(ls); do echo ${x}: $(find "${x}" -type f | wc -l); done'
 alias rm_nodemodules='find . -maxdepth 2 -name "node_modules" -type d -exec rm -rf "{}" \;'
 alias valt='vagrant halt'
